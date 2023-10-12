@@ -8,7 +8,7 @@ Port of fancy Jigsaw [Outline server](https://github.com/Jigsaw-Code/outline-ser
     * [Outline ss-server v1.3.5](https://github.com/Jigsaw-Code/outline-ss-server/releases/tag/v1.3.5)
     * [Prometheus 2.33.5 / 2022-02-22](https://github.com/prometheus/prometheus/releases/tag/v2.33.5)
 2. Node docker image for shadowbox replaced with arm32v6 build 
-    * [arm64v8/node:gallium-alpine3.16](https://hub.docker.com/r/arm64v8/node/)
+    * [arm32v6/node:gallium-alpine3.16](https://hub.docker.com/r/arm32v6/node/)
 
 ## Install and run
 

@@ -18,9 +18,9 @@ export DOCKER_CONTENT_TRUST="${DOCKER_CONTENT_TRUST:-1}"
 # Enable Docker BuildKit (https://docs.docker.com/develop/develop-images/build_enhancements)
 export DOCKER_BUILDKIT=1
 
-# Pin the image node/arm64v8:gallium-alpine3.16.
+# Pin the image node/arm32v6:gallium-alpine3.16.
 # See versions at https://hub.docker.com/_/node/
-readonly NODE_IMAGE="arm64v8/node:gallium-alpine3.16"
+readonly NODE_IMAGE="arm32v6/node:gallium-alpine3.16"
 
 # Doing an explicit `docker pull` of the container base image to work around an issue where
 # Travis fails to pull the base image when using BuildKit. Seems to be related to:
@@ -29,7 +29,7 @@ docker pull "${NODE_IMAGE}"
 docker buildx build --force-rm \
     --build-arg NODE_IMAGE="${NODE_IMAGE}" \
     --build-arg GITHUB_RELEASE="${TRAVIS_TAG:-none}" \
-    --platform=linux/arm64 \
+    --platform=linux/arm/v6 \
     -f src/shadowbox/docker/Dockerfile \
     -t "${SB_IMAGE:-outline/shadowbox}:$(date +%F)" \
     -t "${SB_IMAGE:-outline/shadowbox}" \
