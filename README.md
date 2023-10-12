@@ -13,7 +13,7 @@ Port of fancy Jigsaw [Outline server](https://github.com/Jigsaw-Code/outline-ser
 ## Install and run
 
  ```bash
-  sudo SB_IMAGE="invition/outline-server-arm32v6" bash -c "$(wget -qO- https://raw.githubusercontent.com/iNViTiON/outline-server-arm32/master/src/server_manager/install_scripts/install_server.sh)"
+  sudo SB_IMAGE="invition/outline-server-arm32" bash -c "$(wget -qO- https://raw.githubusercontent.com/iNViTiON/outline-server-arm32/master/src/server_manager/install_scripts/install_server.sh)"
 ```
 
 ## Contribute
