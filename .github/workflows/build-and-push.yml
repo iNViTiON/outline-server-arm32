@@ -39,7 +39,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         env:
-          SB_IMAGE: iNViTiON/outline-server-arm32
+          SB_IMAGE: invition/outline-server-arm32
         with:
           context: .
           file: src/shadowbox/docker/Dockerfile
